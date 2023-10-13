@@ -1,5 +1,354 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  margin: auto;
+  max-width: 375px;
+  color: var(--main-color);
+  font-family: var(--main-font), monospace;
+  font-size: var(--main-font-size);
+  line-height: 1.3;
+  background-color: var(--bg-color);
+  background-image: var(--bg-image);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.header {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  max-width: 355px;
+  margin-bottom: 106px;
+}
+
+.header__theme-menu {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 62px;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+}
+
+.header__theme-menu-button {
+  text-transform: lowercase;
+  background-color: transparent;
+  font-size: var(--main-font-size);
+  line-height: 18px;
+  padding: 0 13px;
+  cursor: pointer;
+  border: 0;
+  color: var(--button-color);
+  height: 26px;
+}
+
+.header__theme-menu-button_active {
+  pointer-events: none;
+  outline: 1px solid var(--decorated-color);
+}
+
+button:hover {
+  outline: 1px solid var(--button-color-outline);
+}
+
+button:focus-visible {
+  border-bottom: 1px solid currentColor;
+  outline: none;
+}
+
+.header__theme-menu-button_active {
+  outline: 1px solid currentColor;
+  pointer-events: none;
+}
+
+.rec {
+  position: absolute;
+  background-image: url(../images/REC.svg);
+  width: 33px;
+  height: 26px;
+  background-repeat: no-repeat;
+  align-self: flex-end;
+  background-position: center;
+  background-size: contain;
+  margin-right: 27px;
+}
+
+.rec::after {
+  content: "";
+  display: inline-block;
+  background-color: var(--accent-color);
+  box-shadow: 0 0 5px var(--accent-color);
+  margin-inline-start: 41px;
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+}
+
+.header__title {
+  color: var(--main-title-color);
+  font-weight: 700;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  line-height: 0.825;
+  text-shadow: 4px 4px 0 #ff0070;
+  margin-top: 67px;
+}
+
+.header__subtitle {
+  color: var(--subtitle-color);
+  font-weight: 700;
+  font-size: var(--main-font-size);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 23.4px;
+  margin-top: 49px;
+}
+
+.header__subtitle-highlight {
+  color: var(--secondary-color);
+  background-color: var(--accent-color);
+}
+
+.main {
+  max-width: 355px;
+  margin: auto;
+}
+
+.paragraph__title {
+  color: var(--subtitle-color);
+  font-weight: 700;
+  font-size: var(--main-font-size);
+  line-height: 1.3;
+  margin-bottom: 19px;
+}
+
+.paragraph__subtitle {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 23.4px;
+  margin-bottom: 11px;
+}
+
+.paragraph__subtitle-highlight {
+  color: var(--secondary-color);
+  background-color: var(--accent-color);
+}
+
+.paragraph__text {
+  margin-bottom: 20px;
+}
+
+.paragraph {
+  margin-bottom: 50px;
+}
+
+.paragraph__advice {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  margin-top: 16px;
+  margin-bottom: 10px;
+}
+
+.picture {
+  margin-top: -8px;
+  object-fit: cover;
+  inline-size: 100%;
+  block-size: 100%;
+}
+
+.pictures {
+  display: grid;
+  gap: 20px;
+}
+
+.footer {
+  margin-top: 12px;
+  display: flex;
+  justify-content: center;
+  min-height: 647px;
+  align-items: center;
+}
+
+.footer__title {
+  justify-self: center;
+  text-shadow: 2px 2px 0 #ff0070;
+}
+
+@media (min-width: 376px) and (max-width: 768px) {
+  .page {
+    max-width: 768px;
+  }
+  .header {
+    max-width: 768px;
+    margin-bottom: 244px;
+  }
+  .main {
+    max-width: 768px;
+  }
+  .rec {
+    margin-top: 10px;
+    margin-right: 48px;
+  }
+  .header__theme-menu {
+    margin-top: 180px;
+    margin-right: 20px;
+  }
+  .header__title {
+    margin-top: 176px;
+  }
+  .header__text {
+    max-width: 364px;
+    margin-top: 160px;
+    align-self: flex-end;
+  }
+  .paragraph {
+    max-width: 728px;
+    margin: auto;
+  }
+  .paragraph-1 {
+    display: flex;
+    gap: 20px;
+  }
+  .articles {
+    max-width: 472px;
+    margin-bottom: 57px;
+  }
+  .paragraph__title {
+    max-width: 236px;
+  }
+  .tip-section {
+    margin-top: 79px;
+  }
+  .picture-section {
+    max-width: 728px;
+    margin: auto;
+    margin-top: 6px;
+  }
+  .pictures {
+    margin-top: 28px;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+  }
+  .sunset {
+    grid-column: 1 / 3;
+  }
+
+  .icecream {
+    grid-column: 3;
+    grid-row: 1 / 4;
+  }
+
+  .tape {
+    grid-column: 1 / 2;
+    grid-row: 2/ 5;
+  }
+
+  .street {
+    grid-column: 2 / 4;
+    grid-row: 4 / 5;
+  }
+  .books {
+    grid-column: 2;
+  }
+  .footer {
+    min-height: 984px;
+  }
+  .footer__title {
+    margin-top: 128px;
+  }
+}
+
+@media (min-width: 769px) {
+  .page {
+    max-width: 1024px;
+  }
+  .header {
+    max-width: 1024px;
+    margin-bottom: 195px;
+  }
+  .main {
+    max-width: 984px;
+  }
+  .rec {
+    margin-top: 10px;
+    margin-right: 48px;
+  }
+  .header__theme-menu {
+    margin: 0;
+    margin-top: 8px;
+    justify-content: center;
+  }
+  .header__theme-menu-list {
+    flex-direction: row;
+  }
+  .header__title {
+    margin-top: 280px;
+    font-size: 157px;
+    line-height: 82.5%;
+  }
+  .header__text {
+    max-width: 491px;
+    align-self: flex-end;
+    margin-right: 2%;
+    margin-top: 110px;
+  }
+  .paragraph-1 {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 59px;
+  }
+  .paragraph__title {
+    max-width: 315px;
+  }
+  .articles {
+    max-width: 648px;
+  }
+  .article__container {
+    display: flex;
+    gap: 20px;
+  }
+  .article {
+    width: 100%;
+  }
+  .tip-section {
+    margin-top: 59px;
+  }
+  .pictures {
+    margin-top: 28px;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+  }
+  .sunset {
+    grid-column: 1 / 3;
+  }
+
+  .icecream {
+    grid-column: 3;
+    grid-row: 1 / 4;
+  }
+
+  .tape {
+    grid-column: 1 / 2;
+    grid-row: 2/ 5;
+  }
+
+  .street {
+    grid-column: 2 / 4;
+    grid-row: 4 / 5;
+  }
+  .books {
+    grid-column: 2;
+  }
+  .footer {
+    min-height: 728px;
+    padding-bottom: 138px;
+    align-items: baseline;
+  }
 }
