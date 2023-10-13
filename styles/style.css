@@ -20,8 +20,9 @@
   flex-direction: column;
   margin-top: 10px;
   max-width: 355px;
-  margin-bottom: 109px;
-  height: 100%;
+  margin-bottom: 30px;
+  min-height: 668px;
+  height: 100vh;
 }
 
 .header__theme-menu {
@@ -103,7 +104,6 @@ button:focus-visible {
   font-weight: 700;
   font-size: var(--main-font-size);
   font-style: normal;
-  font-weight: 700;
   line-height: 23.4px;
   margin-top: 55px;
 }
@@ -168,12 +168,30 @@ button:focus-visible {
   display: flex;
   justify-content: center;
   height: 100vh;
+  min-height: 667px;
   align-items: center;
 }
 
 .footer__title {
   justify-self: center;
   text-shadow: 2px 2px 0 #ff0070;
+}
+
+.link-decor {
+  display: inline-block;
+  block-size: 1em;
+  line-height: 0.8;
+  text-decoration: none;
+  text-shadow: 2px 2px var(--accent-color);
+  cursor: pointer;
+}
+
+.link-decor:hover {
+  border-bottom: 1px solid currentColor;
+}
+
+.link-decor:focus-visible {
+  outline: 1px solid currentColor;
 }
 
 @media (min-width: 376px) and (max-width: 768px) {
@@ -251,6 +269,9 @@ button:focus-visible {
   }
   .books {
     grid-column: 2;
+  }
+  .footer {
+    min-height: 1024px;
   }
   .footer__title {
     margin-top: 128px;
@@ -337,5 +358,8 @@ button:focus-visible {
   }
   .books {
     grid-column: 2;
+  }
+  .footer {
+    min-height: 768px;
   }
 }
