@@ -167,10 +167,8 @@ button:focus-visible {
   margin-top: 12px;
   display: flex;
   justify-content: center;
-  height: 100vh;
-  min-height: 667px;
+  min-height: var(--header-height);
   align-items: center;
-  padding-bottom: 100px;
 }
 
 .footer__title {
