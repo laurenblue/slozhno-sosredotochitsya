@@ -92,9 +92,9 @@ button:focus-visible {
 }
 
 .big-text {
+  font-size: 116px;
   color: var(--main-title-color);
   font-weight: 700;
-  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   line-height: 0.825;
   text-shadow: 4px 4px 0 #ff0070;
 }
@@ -175,6 +175,7 @@ button:focus-visible {
 .footer__title {
   justify-self: center;
   text-shadow: 2px 2px 0 #ff0070;
+  margin-top: 47px;
 }
 
 .link-decor {
@@ -200,7 +201,7 @@ button:focus-visible {
   }
   .header {
     max-width: 768px;
-    margin-bottom: 244px;
+    margin-bottom: 50px;
   }
   .main {
     max-width: 768px;
@@ -220,6 +221,7 @@ button:focus-visible {
     max-width: 364px;
     margin-top: 160px;
     align-self: flex-end;
+    margin-right: 3%;
   }
   .paragraph {
     max-width: 728px;
@@ -274,7 +276,10 @@ button:focus-visible {
     min-height: 1024px;
   }
   .footer__title {
-    margin-top: 128px;
+    margin-top: 83px;
+  }
+  .big-text {
+    font-size: 120px;
   }
 }
 
@@ -284,7 +289,7 @@ button:focus-visible {
   }
   .header {
     max-width: 1024px;
-    margin-bottom: 195px;
+    margin-bottom: 50px;
   }
   .main {
     max-width: 984px;
@@ -361,5 +366,11 @@ button:focus-visible {
   }
   .footer {
     min-height: 768px;
+  }
+  .footer__title {
+    margin-top: 92px;
+  }
+  .big-text {
+    font-size: 157px;
   }
 }
