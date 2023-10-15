@@ -4,14 +4,14 @@
 */
 /* Файл variables.css */
 :root {
-  --main-color: #F1B2CE;
+  --main-color: #f1b2ce;
   --main-title-color: #db00ff;
-  --accent-color: #FF0070;
-  --subtitle-color: #FF0070;
+  --accent-color: #ff0070;
+  --subtitle-color: #ff0070;
   --secondary-color: #000028;
   --bg-color: #000028;
   --bg-image: url(../images/cover-image-dark.png);
-  --button-color-outline: rgba(255, 0, 112, 0.40);
-  --main-font: 'IBM Plex mono';
+  --button-color-outline: rgba(255, 0, 112, 0.4);
+  --main-font: "IBM Plex mono";
   --main-font-size: 18px;
 }

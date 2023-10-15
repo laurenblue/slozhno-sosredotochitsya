@@ -9,15 +9,15 @@
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
-    --main-color: #353430;
-  --main-title-color: #FFC2E6;
-  --accent-color: #FF8DCB;
+  --main-color: #353430;
+  --main-title-color: #ffc2e6;
+  --accent-color: #ff8dcb;
   --subtitle-color: #353430;
   --secondary-color: #353430;
-  --bg-color: #FFF1F7;
+  --bg-color: #fff1f7;
   --bg-image: url(../images/cover-image-light.png);
-  --button-color-outline: rgba(50, 49, 45, 0.40);
-  --main-font: 'IBM Plex mono';
+  --button-color-outline: rgba(50, 49, 45, 0.4);
+  --main-font: "IBM Plex mono";
   --main-font-size: 18px;
   --indent-paragraph: 20px;
   --indent-subtitle: 10px;
@@ -28,7 +28,65 @@
   display: none;
 }
 
-.theme_light .decorated-zone {
-  color: var(--main-color);
+@media (prefers-color-scheme: light) {
+  :root {
+    --main-color: #353430;
+    --main-title-color: #ffc2e6;
+    --accent-color: #ff8dcb;
+    --subtitle-color: #353430;
+    --secondary-color: #353430;
+    --bg-color: #fff1f7;
+    --bg-image: url(../images/cover-image-light.png);
+    --button-color-outline: rgba(50, 49, 45, 0.4);
+    --main-font: "IBM Plex mono";
+    --main-font-size: 18px;
+    --indent-paragraph: 20px;
+    --indent-subtitle: 10px;
+    --padding-sections: 10px;
+  }
+  .rec {
+    display: none;
+  }
+  .decorated-zone::after {
+    content: "";
+    position: absolute;
+    inset-block-start: 10px;
+    inset-inline-end: 10px;
+    block-size: 25px;
+    inline-size: 25px;
+    border-block-start: 1px solid;
+    border-inline-end: 1px solid;
+  }
+
+  .decorated-zone::before {
+    content: "";
+    position: absolute;
+    inset-block-end: 10px;
+    inset-inline-start: 10px;
+    block-size: 25px;
+    inline-size: 25px;
+    border-block-end: 1px solid;
+    border-inline-start: 1px solid;
+  }
 }
 
+@media (min-width: 768px) {
+  .header__title {
+    text-shadow: 4px 4px 0px #ff0070;
+  }
+  .footer__title {
+    text-shadow: 4px 4px 0px #ff0070;
+  }
+}
+
+@media (768px <= width) {
+  .decorated-zone::after {
+    inset-block-start: 20px;
+    inset-inline-end: 20px;
+  }
+
+  .decorated-zone::before {
+    inset-block-end: 20px;
+    inset-inline-start: 20px;
+  }
+}
