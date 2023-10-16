@@ -31,3 +31,11 @@
 .page.theme_dark .footer__title {
   text-shadow: 4px 4px 0px #ff0070;
 }
+
+.page.theme_dark .header__theme-menu {
+  color: #ff0070;
+}
+
+.page.theme_dark .decorated-zone {
+  color: #ff0070;
+}
