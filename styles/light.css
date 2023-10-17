@@ -51,7 +51,7 @@
     content: "";
     position: absolute;
     inset-block-start: 10px;
-    inset-inline-end: 10px;
+    inset-inline-end: 0px;
     block-size: 25px;
     inline-size: 25px;
     border-block-start: 1px solid;
@@ -62,7 +62,7 @@
     content: "";
     position: absolute;
     inset-block-end: 10px;
-    inset-inline-start: 10px;
+    inset-inline-start: 0px;
     block-size: 25px;
     inline-size: 25px;
     border-block-end: 1px solid;

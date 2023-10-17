@@ -18,10 +18,10 @@
   margin: auto;
   display: flex;
   flex-direction: column;
-  margin-top: 10px;
-  max-width: 355px;
-  margin-bottom: 30px;
-  min-height: 668px;
+  position: relative;
+  max-width: calc(100% - 5%);
+  margin-bottom: 40px;
+  min-height: 648px;
   height: 100vh;
 }
 
@@ -50,7 +50,7 @@
 .header__theme-menu {
   display: flex;
   justify-content: flex-end;
-  margin-top: 65px;
+  margin-top: 74px;
 }
 
 .header__theme-menu-list {
@@ -80,7 +80,7 @@ button:focus {
   outline: none;
 }
 
-.button:focus-visible {
+button:focus-visible {
   border-bottom: 1px solid currentColor;
 }
 
@@ -98,6 +98,7 @@ button:focus {
   align-self: flex-end;
   background-position: center;
   background-size: contain;
+  margin-top: 10px;
   margin-right: 27px;
 }
 
@@ -136,6 +137,7 @@ button:focus {
 .main {
   max-width: 355px;
   margin: 2%;
+  margin: auto;
 }
 
 .paragraph__title {
@@ -190,6 +192,7 @@ button:focus {
 }
 
 .footer {
+  margin: auto;
   margin-top: 32px;
   display: flex;
   justify-content: center;
@@ -197,6 +200,7 @@ button:focus {
   min-height: 668px;
   align-items: center;
   position: relative;
+  width: calc(100% - 6%);
 }
 
 .footer__title {
@@ -224,6 +228,23 @@ button:focus {
   outline: 1px solid currentColor;
 }
 
+@media (min-width: 376px) and (max-width: 767px) {
+  .page {
+    min-width: 100%;
+  }
+
+  .header {
+    max-width: 100%;
+    margin: auto;
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+
+  .main {
+    max-width: calc(100% - 4%);
+  }
+}
+
 @media (768px <= width < 1024px) {
   .page {
     min-width: 100%;
@@ -231,20 +252,21 @@ button:focus {
 
   .header {
     max-width: 100%;
-    margin-bottom: 50px;
+    margin-bottom: 60px;
+    min-height: 984px;
   }
 
   .main {
-    max-width: calc(100% - 2%);
+    max-width: calc(100% - 4%);
   }
 
   .rec {
-    margin-top: 10px;
+    margin-top: 20px;
     margin-right: 48px;
   }
 
   .header__theme-menu {
-    margin-top: 180px;
+    margin-top: 25%;
     margin-right: 20px;
   }
 
@@ -325,6 +347,7 @@ button:focus {
 
   .footer {
     margin-top: 53px;
+    width: 100%;
   }
 
   .big-text {
@@ -344,26 +367,27 @@ button:focus {
 
 @media (1024px <= width) {
   .page {
-    min-width: 100%;
+    max-width: 1024px;
   }
 
   .header {
     max-width: 100%;
-    margin-bottom: 50px;
+    margin-bottom: 60px;
+    min-height: 728px;
   }
 
   .main {
-    max-width: calc(100% - 2%);
+    max-width: calc(100% - 4%);
   }
 
   .rec {
-    margin-top: 10px;
+    margin-top: 20px;
     margin-right: 48px;
   }
 
   .header__theme-menu {
     margin: 0;
-    margin-top: 8px;
+    margin-top: 18px;
     justify-content: center;
   }
 
@@ -443,6 +467,7 @@ button:focus {
   .footer {
     min-height: 768px;
     margin-top: 58px;
+    width: 100%;
   }
 
   .big-text {
